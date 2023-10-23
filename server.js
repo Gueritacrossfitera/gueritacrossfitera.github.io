@@ -7,7 +7,7 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 // Indica a Express que sirva archivos estáticos desde el directorio "public"
-app.use(express.static('public'));
+app.use(express.static('docs'));
 
 // Configuración de conexión a la base de datos
 const dbConfig = {
@@ -22,7 +22,7 @@ const dbConfig = {
 app.get('/', (req, res) => {
   // Debes enviar la página HTML que contiene el formulario de encuesta aquí.
   // Por ejemplo:
-  res.sendFile(__dirname + '/public' + '/encuesta_prueba.html');
+  res.sendFile(__dirname + '/docs' + '/index.html');
 });
 
 
